@@ -1,0 +1,20 @@
+{
+  "name": "cypress-movistar-luzara",
+  "version": "1.0.0",
+  "description": "Pruebas con Cypress en Tienda Movistar",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^8.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npx cypress run"
+  },
+  "keywords": [
+    "cypress",
+    "ejercicio",
+    "movistar"
+  ],
+  "author": "Luciana Zaracho",
+  "license": "ISC"
+}
