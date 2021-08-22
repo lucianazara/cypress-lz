@@ -1,11 +1,10 @@
-{
- 
-    "buscador": ".js-desktop-search-button",
-    "searchbox": "#myInput",
+ {
+
+
+    "buscador" : ".js-desktop-search-button",
+    "searchbox" : "#myInput",
     "celularA52": ".product-name > a",
     "doceCuotas": "#installments-text",
-    "botonComprar": "[title='Comprar']",
-    "grillaProductos":".category-products",
-    "productoLista": "[productposition='3']"
+    "botonComprar": "[title='Comprar']"
 
 }

@@ -9,36 +9,36 @@
 // - Que el equipo seleccionado sea el tercero de la lista 
 // - Que no exista un medio de pago con 60 cuotas para el banco Credicoop con tarjeta VISA 
 
-describe('CP003 - Validar cuotas en compra de equipo -Cuotas.60 -Equipo.Tercero de la lista -Banco.Credicoop -Tarjeta.Visa', ()=>{
+describe('Pruebas', ()=>{
     beforeEach(()=>{
         cy.visit('/')
     })
 
-    it('Ingreso correcto a la pagina de Tienda Movistar', ()=>{
+    it('CP003 - Validar cuotas en compra de equipo -Cuotas.60 -Equipo.Tercero de la lista -Banco.Credicoop -Tarjeta.Visa', ()=>{
         cy.url().should('include', 'tienda.movistar.com.ar');
-
-    })
-
-// it('Seleccion del tercer equipo de la lista', ()=>{    
-//     cy.fixture('searchResult').then((searchResult)=>{
-//         cy.get(searchResult.grillaProductos);
-//         cy.get(searchResult.productoLista);
-//         cy.get(searchResult.productoLista).click({ multiple: true });
+        cy.fixture('financiacion').then((financiacion)=>{
+        cy.get(financiacion.grillaProductos);
+        cy.get(financiacion.tercerProducto).eq(2).click();
+        cy.get(financiacion.opcionesFinanciacion).click({ multiple: true });
+        cy.contains('Financiación con tarjeta').should("be.visible");
+        cy.get(financiacion.seleccionBanco).select('Credicoop');
+        cy.get(financiacion.seleccionTarjeta).select('Visa');
+        cy.get(financiacion.grillaCuotas).eq(-1).should('not.contain', '60');
         
-//     })
-
-// })
-    
-})
-
-// it('No existe un medio de pago con 60 cuotas para el banco Creedicop con tarjeta Visa', ()=>{   
-//         cy.fixture('financiacion').then((financiacion)=>{
-//             cy.get(financiacion.opcionesFinanciacion).click({ multiple: true });
-//             cy.get(financiacion.selectorBancos);
-            
 
           
+          })
+  })
+
+        })
+
+      
        
+        
+           
+
+
+
+      
        
-//     })
-// })
+    

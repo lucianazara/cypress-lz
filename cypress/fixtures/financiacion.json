@@ -1,6 +1,8 @@
 {
+    "grillaProductos": ".products-grid",
+    "tercerProducto": ".products-grid > li",
     "opcionesFinanciacion": "#open-modal-installments",
-    "selectorBancos": "bankCardSelector"
-
-
+    "seleccionBanco": "#selectBank",
+    "seleccionTarjeta": "#selectCardByBank",
+    "grillaCuotas" : "#bodyTable > tr"
 }
